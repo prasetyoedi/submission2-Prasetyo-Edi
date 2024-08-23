@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <app-bar></app-bar>
+
+    <main>
+      <section>
+        <h2>Add New Note</h2>
+        <form id="add-note-form">
+          <input
+            type="text"
+            id="note-title"
+            placeholder="Note Title"
+            required
+          />
+          <textarea id="note-body" placeholder="Note Body" required></textarea>
+          <button type="submit">Add Note</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Your Notes</h2>
+        <note-list></note-list>
+      </section>
+    </main>
+    <div id="loading" class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
